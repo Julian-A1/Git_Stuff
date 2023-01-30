@@ -9,11 +9,7 @@ git status ##for checking which repository/directory you are in
 
 git clone for cloning a repository onto your computer(Copy url from the repository)
 For private repositories you'll need to set up tokens
-##github token doesn't expire
-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
 for cloning private repos, git clone https://<token>@...............
-##other token, expires in 90 days
-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
 
 ##git basic workflow
 a commit is a change
