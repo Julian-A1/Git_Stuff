@@ -1,0 +1,54 @@
+git config user.name > returns the username
+git config user.email > returns the user email
+
+git config --global user.name "<Your name here>"
+git config --global user.email "<Your email address here>"
+
+git init ##for initializig a repository
+git status ##for checking which repository/directory you are in
+
+git clone for cloning a repository onto your computer(Copy url from the repository)
+For private repositories you'll need to set up tokens
+##github token doesn't expire
+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
+for cloning private repos, git clone https://<token>@...............
+##other token, expires in 90 days
+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
+
+##git basic workflow
+a commit is a change
+before commiting a change you first add them to the staging area then commit them to the repository
+you later push them to github
+to get them back from github, you pull them back from github
+
+##git add and commit
+git add <file name>
+git commit -m "<message to show, its important>"
+to add all the changes at once use git add .(with a period)
+
+##git log
+this shows the list of all the commits made to a repository, like the history of a repo
+run git log in the terminal
+
+##pushing changes into the remote branch on github
+first you have to link the repo in your machine to the remote repo online
+git remote -v to view any connections to any branch
+git remote add origin <url of the repo you created online>
+git remote remove  origin to remove the origin
+to avoid errors you can add your PAT in the url
+git push -u origin master to push it to the github repo online
+git branch -M main renames the branch from master(default) to main(current)
+
+
+#using git fetch
+will download changes from the github remote repository however the changes will not be seen in the files that you have been working on, it essentially enables you to grab additional work done on the remote master branch without needing to merge it in the working directory files, it just enables you to see the changes that others have made without you having to overwrite your own files 
+
+git fetch origin main
+
+#using git pull
+directly grabs the changes from the remote branch and directly merges them to yoiur current branch hene updating the files
+
+#git checkout origin/master
+#git switch master
+the above can only be used after running git fetch
+
